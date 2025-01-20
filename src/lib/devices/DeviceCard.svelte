@@ -6,6 +6,7 @@
 	import MoveDevice from './DeviceCard/MoveDevice.svelte';
 	import RemoveDevice from './DeviceCard/RemoveDevice.svelte';
 	import RenameDevice from './DeviceCard/RenameDevice.svelte';
+	import EditIPAddresses from './DeviceCard/EditIPAddresses.svelte';
 
 	export let device = new Device();
 	let cardExpanded = false;
@@ -116,11 +117,7 @@
 						<tr>
 							<th>IP Addresses</th>
 							<td>
-								<ul class="list-disc list-inside">
-									{#each device.ipAddresses as address}
-										<li>{address}</li>
-									{/each}
-								</ul>
+								<EditIPAddresses node={device} />
 							</td>
 						</tr>
 						<tr>
