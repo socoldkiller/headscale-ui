@@ -28,7 +28,7 @@
 		try {
 			// Update each IP address individually
 			for (const ip of ips) {
-				const response = await fetch(`/api/v1/node/${node.id}/ip/${ip}`, {
+				const response = await fetch(`/api/v1/node/${node.id}/changeIPAddress/${ip}`, {
 					method: 'PUT',
 					headers: {
 						'Content-Type': 'application/json',
